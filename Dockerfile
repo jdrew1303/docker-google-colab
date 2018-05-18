@@ -10,7 +10,7 @@ COPY requirements.txt .
 
 RUN pip install -r requirements.txt \
     || pip install html5lib==0.9999999 \
-    && jupyter serverextension enable --py jupyter_http_over_ws \
+    && jupyter serverextension enable --py jupyter_http_over_ws
 
 EXPOSE 8888
 
