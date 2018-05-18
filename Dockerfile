@@ -14,4 +14,4 @@ RUN pip install -r requirements.txt \
 
 EXPOSE 8888
 
-CMD ["jupyter","notebook","--NotebookApp.allow_origin='*'","--allow-root","--port","8888","--ip","0.0.0.0"]
+CMD ["jupyter","notebook","--NotebookApp.allow_origin='https://colab.research.google.com'","--NotebookApp.token=''","--allow-root","--port","8888","--ip","0.0.0.0"]
