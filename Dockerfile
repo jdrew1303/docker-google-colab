@@ -9,7 +9,8 @@ WORKDIR /opt/colab
 COPY requirements.txt .
 
 RUN pip install -r requirements.txt \
-    && jupyter serverextension enable --py jupyter_http_over_ws
+    || pip install html5lib==0.9999999 \
+    && jupyter serverextension enable --py jupyter_http_over_ws \
 
 EXPOSE 8888
 
